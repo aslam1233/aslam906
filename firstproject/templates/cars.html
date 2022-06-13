@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cars</title>
+</head>
+<body>
+<legend>
+    <h1 style="color: cadetblue;
+    font-family: sans-serif;
+    font-stretch: ultra-condensed;
+    font-style: italic;
+    font-family: fantasy;"><u>CARS</u></h1></legend>
+<form action="{% url 'welcome:fun2' %}" method="post">
+    {% csrf_token %}
+    <fieldset style="border: outset;">
+        <label for="name" style="color: cadetblue;
+    font-weight: bold;
+    font-family: cursive;">NAME:</label>
+        <input type="text" name="name" required style="background-color: antiquewhite;
+    color: black;
+    border: inset;"><br><br>
+        <label for="car" style="font-family: cursive;
+    color: cadetblue;
+    font-weight: bold;
+">CAR:</label>
+        <input type="text" name="car" required style="background-color: antiquewhite;
+    color: black;
+    border: inset;"><br><br>
+        <label for="cmp" style="color: cadetblue;
+    font-family: cursive;
+    font-weight: bold;
+">COMPANY:</label>
+        <input type="text" name="cmp" required style="background-color: antiquewhite;
+    color: black;
+    border: inset;"><br><br>
+        <input type="submit" value="submit" style="background-color: black;
+    color: aliceblue;">
+    </fieldset>
+</form>
+
+</body>
+</html>

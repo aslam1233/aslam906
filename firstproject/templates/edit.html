@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<legend>
+<h1 ><u>FORM</u></h1></legend>
+<form action="{% url 'home:edit' ob.id %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+    <label for="name">NAME:</label>
+    <input type="text" name="name" value="{{ob.name}}" required><br><br>
+    <label for="age">AGE:</label>
+    <input type="number" name="age" value="{{ob.age}}" required><br><br>
+    <label for="dob">DOB:</label>
+    <input type="date" name="dob" value="{{ob.dob}}" required><br><br>
+    <input type="submit" value="submit">
+</fieldset>
+</form>
+</body>
+</html>

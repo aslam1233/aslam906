@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>NAME</th>
+        <th>AGE</th>
+        <th>DOB</th>
+    </tr>
+    {% for i in ob %}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.dob}}</td>
+        <td><a href="{% url 'home:delete' i.id %}">Delete</a> </td>
+        <td><a href="{% url 'home:edit' i.id %}">Edit</a> </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

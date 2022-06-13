@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>welcome</title>
+    <style>
+        body{
+        padding-top:150px;
+
+    </style>
+</head>
+<body>
+<table border="1" align="center" style="table-layout: fixed;
+    border: outset;
+    background-color: beige;
+    border-color: skyblue;
+    width:50%">
+    <tr style="color: burlywood;">
+        <th>NAME</th>
+        <th>CAR</th>
+        <th>CMP</th>
+    </tr>
+    {% for i in ob %}
+    <tr style="color: darkgrey;
+    font-weight: bolder;
+    font-style: italic;">
+        <td align="center">{{i.name}}</td>
+        <td align="center">{{i.car}}</td>
+        <td align="center">{{i.cmp}}</td>
+        <td align="center"><a href="{% url 'welcome:delete' i.id %}" style="color: brown;">Delete</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

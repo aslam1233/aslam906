@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insert elements</title>
+</head>
+<body>
+<legend>
+<h1 ><u>FORM</u></h1></legend>
+<form action="{% url 'home:fun3' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+    <label for="name">NAME:</label>
+    <input type="text" name="name" required><br><br>
+    <label for="age">AGE:</label>
+    <input type="number" name="age" required><br><br>
+    <label for="dob">DOB:</label>
+    <input type="date" name="dob" required><br><br>
+    <input type="submit" value="submit">
+</fieldset>
+</form>
+
+</body>
+</html>
